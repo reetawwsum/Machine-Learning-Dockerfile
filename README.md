@@ -18,27 +18,34 @@ Dockerfile for Machine Learning
 
 ## Usage
 
-To launch Jupyter Notebook
+To launch Jupyter Notebook:
 
 	$ docker run --rm -t -i --name ml -p 8888:8888 machine-learning --ip=0.0.0.0
 
-To launch Jupyter Notebook on current directory
+To launch Jupyter Notebook on current directory:
 
 	$ docker run --rm -t -i --name ml -p 8888:8888 -v $PWD:/usr/local/src/notebooks machine-learning --ip=0.0.0.0
 
-To run shell after launching Jupyter Notebook
+To run shell after launching Jupyter Notebook:
 
 	$ docker exec -t -i ml /bin/bash
 
-To run Python REPL after launching Jupyter Notebook
+To run Python REPL after launching Jupyter Notebook:
 
 	$ docker exec -t -i ml python2.7
 
-To build image from Dockerfile
+Clone this repo and
 
 	$ git clone https://github.com/reetawwsum/Machine-Learning-Dockerfile.git
 	$ cd Machine-Learning-Dockerfile
+
+to build image from Dockerfile:
+
 	$ docker build -t machine-learning .
+
+to build python script present in current directory from Sublime Text 3:
+
+	$ cp Docker-Python.sublime-build [user-packages folder]
 
 ## License
 [The MIT License (MIT)](LICENSE)
