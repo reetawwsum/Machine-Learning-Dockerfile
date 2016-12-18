@@ -18,13 +18,17 @@ Dockerfile for Machine Learning
 
 ## Usage
 
+Pull docker image from [DockerHub](https://hub.docker.com/r/reetawwsum/machine-learning)
+
+	$ docker pull reetawwsum/machine-learning
+
 To launch Jupyter Notebook:
 
-	$ docker run --rm -t -i --name ml -p 8888:8888 machine-learning --ip=0.0.0.0
+	$ docker run --rm -t -i --name ml -p 8888:8888 reetawwsum/machine-learning --ip=0.0.0.0
 
 To launch Jupyter Notebook on current directory:
 
-	$ docker run --rm -t -i --name ml -p 8888:8888 -v $PWD:/usr/local/src/notebooks machine-learning --ip=0.0.0.0
+	$ docker run --rm -t -i --name ml -p 8888:8888 -v $PWD:/usr/local/src/notebooks reetawwsum/machine-learning --ip=0.0.0.0
 
 To run shell after launching Jupyter Notebook:
 
