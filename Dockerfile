@@ -33,8 +33,11 @@ RUN pip install -U ipython \
 		pandas \
 		scikit-learn \
 		scipy \
-		tensorflow \
 		virtualenv
+
+RUN export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.0rc1-cp27-none-linux_x86_64.whl
+
+RUN pip install --upgrade $TF_BINARY_URL
 
 RUN rm -rf /tmp/*
 
