@@ -33,6 +33,7 @@ RUN pip install -U ipython \
 		pandas \
 		scikit-learn \
 		scipy \
+		tensorflow \
 		virtualenv
 
 RUN rm -rf /tmp/*
