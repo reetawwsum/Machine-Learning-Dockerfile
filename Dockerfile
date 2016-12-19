@@ -9,6 +9,7 @@ RUN rpm -iUvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch
 	yum install -y bzip2-devel \
 		openssl-devel \
 		sqlite-devel \
+		tk-devel \
 		wget \
 		zlib-devel
 
