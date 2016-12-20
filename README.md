@@ -1,8 +1,8 @@
-# Machine-Learning-Dockerfile
-Dockerfile for Machine Learning
-
 [![Docker Automated build](https://img.shields.io/docker/automated/reetawwsum/machine-learning.svg)](https://hub.docker.com/r/reetawwsum/machine-learning)
 [![Docker Pulls](https://img.shields.io/docker/pulls/reetawwsum/machine-learning.svg)](https://hub.docker.com/r/reetawwsum/machine-learning)
+
+# Machine-Learning-Dockerfile
+Dockerfile for Machine Learning
 
 ## Features
 
