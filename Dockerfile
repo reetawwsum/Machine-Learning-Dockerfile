@@ -6,12 +6,8 @@ RUN rpm -iUvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch
 	yum update -y && \
 	yum upgrade -y && \
 	yum groupinstall -y development && \
-	yum install -y atlas \
-		atlas-devel \
-		bzip2-devel \
-		libffi-devel \
+	yum install -y bzip2-devel \
 		openssl-devel \
-		python-devel \
 		sqlite-devel \
 		tk-devel \
 		wget \
@@ -40,9 +36,7 @@ RUN pip install -U ipython \
 		scipy \
 		virtualenv
 
-ENV TF_BINARY_URL https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0-cp27-none-linux_x86_64.whl
-
-RUN pip install -U $TF_BINARY_URL
+RUN pip install -U https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0-cp27-none-linux_x86_64.whl
 
 RUN rm -rf /tmp/*
 
