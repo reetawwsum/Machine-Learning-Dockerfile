@@ -20,7 +20,7 @@ RUN wget https://www.python.org/ftp/python/2.7.12/Python-2.7.12.tgz && \
 
 WORKDIR /tmp/Python-2.7.12
 
-RUN ./configure && \
+RUN ./configure --prefix=/usr --enable-unicode=ucs4 && \
 	make && \
 	make altinstall
 
