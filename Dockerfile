@@ -40,7 +40,7 @@ ENV TF_BINARY_URL https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow
 
 RUN pip install -U $TF_BINARY_URL
 
-RUN rm -rf /tmp/*
+RUN rm -rf /tmp
 
 COPY notebooks /usr/local/src/notebooks
 
