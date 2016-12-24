@@ -42,14 +42,14 @@ RUN pip install -U $TF_BINARY_URL
 
 RUN rm -rf /tmp
 
-COPY notebooks /usr/local/src/notebooks
+ADD notebooks /usr/local/src/notebooks
 
-COPY run_jupyter.sh /usr/local/src
+WORKDIR /usr/local/src/notebooks
 
-RUN chmod 777 /usr/local/src/run_jupyter.sh
+ADD bootstrap.sh /usr/local/src/bootstrap.sh
+RUN chown root:root /usr/local/src/bootstrap.sh
+RUN chmod 700 /usr/local/src/bootstrap.sh
 
 EXPOSE 8888
 
-WORKDIR "/usr/local/src/notebooks"
-
-ENTRYPOINT ["/usr/local/src/run_jupyter.sh"]
+ENTRYPOINT ["/usr/local/src/bootstrap.sh"]
