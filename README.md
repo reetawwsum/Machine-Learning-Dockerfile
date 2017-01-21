@@ -17,9 +17,10 @@ Dockerfile for Machine Learning
 9. pandas
 10. scikit-learn
 11. SciPy
-12. tensorflow
-13. virtualenv
-14. xlrd
+12. seaborn
+13. tensorflow
+14. virtualenv
+15. xlrd
 
 ## Usage
 

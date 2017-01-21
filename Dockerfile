@@ -34,6 +34,7 @@ RUN pip install -U ipython \
 		pandas \
 		scikit-learn \
 		scipy \
+		seaborn \
 		virtualenv \
 		xlrd
 
